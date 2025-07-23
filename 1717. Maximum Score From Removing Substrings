@@ -1,0 +1,68 @@
+
+/*
+Leetcode Link : https://leetcode.com/problems/maximum-erasure-value/\
+@vikashkumargupta
+
+*/
+/*************************************************************** JAVA *************************************************/
+//Approach-1 (Sliding Window)
+//T.C : O(n)
+//S.C : O(n)
+class Solution {
+    public int maximumUniqueSubarray(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        
+        int i = 0; 
+        int j = 0;
+        int sum = 0;
+        int max = 0;
+        
+        while(j < nums.length) {
+            if(!set.contains(nums[j])) {
+                sum += nums[j];
+                max = Math.max(max, sum); 
+                set.add(nums[j++]);
+            } else {
+                sum -= nums[i];
+                set.remove(nums[i++]);
+            }
+        }
+        
+        return max;
+    }
+}
+
+
+
+//Approach-2 (Using cumulative sum to find subarray sum)
+//T.C : O(n)
+//S.C : O(n)
+class Solution {
+    public int maximumUniqueSubarray(int[] nums) {
+        int n = nums.length;
+
+        int[] cus = new int[n]; 
+        cus[0] = nums[0];
+        for(int i = 1; i < n; i++)
+            cus[i] = cus[i-1] + nums[i];
+
+        int[] mp = new int[10001];
+        Arrays.fill(mp, -1);
+        
+        int maxS = 0;
+        int i = 0;
+        int j = 0;
+
+        while(j < n) {
+            i       = Math.max(i, mp[nums[j]] + 1); 
+            int jthSum  = cus[j];
+            int ithSum  = i-1 < 0 ? 0 : cus[i-1];
+            maxS        = Math.max(maxS, jthSum - ithSum);
+            mp[nums[j]] = j;
+
+            j++;
+        }
+
+        return maxS;
+    }
+}
