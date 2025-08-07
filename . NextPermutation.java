@@ -12,9 +12,6 @@ While the next permutation of arr = [3,2,1] is [1,2,3] because [3,2,1] does not 
 Given an array of integers nums, find the next permutation of nums.
 
 
-
- 
-
 Example 1:
 
 Input: nums = [1,2,3]
@@ -87,6 +84,7 @@ class Solution {
 Time complexity: |O(n)|
 Space complexity:|O(1)|
 */ 
+
 
 
 
