@@ -1,5 +1,5 @@
 /*
-leetcode link  https://leetcode.com/problems/count-of-interesting-subarrays/description/
+leetcode link  https://leetcode.com/problems/count-of-interesting-subarrays/description
 @vikashkumargupta*/
 class Solution {
     public long countInterestingSubarrays(List<Integer> nums, int m, int k) {
