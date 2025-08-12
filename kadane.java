@@ -1,3 +1,8 @@
+/*
+leetcode links  https://leetcode.com/problems/maximum-subarray/description/
+@vikashkumargupta
+*/
+
 public class kadane {
     
 /* Problem Description
@@ -58,4 +63,5 @@ class Solution {
 /* Complexity Analysis : 
 Time complexity: |O(n)|
 Space complexity:|O(1)|
+
 */ 
