@@ -4,7 +4,7 @@ https://leetcode.com/problems/pascals-triangle
 
 */
 **********************************************************************JAVA***********************************************************************************
-class Solution {
+class Solution  {
     public List<List<Integer>> generate(int numRows) {
 List<List<Integer>> triangle = new ArrayList<List<Integer>>();
 
