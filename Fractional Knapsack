@@ -1,10 +1,9 @@
-
 /* 
-    Company Tags       : Microsoft
-    Leetcode Link      : https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
+ Company Tags       : Microsoft
+ Leetcode Link      : https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
 */
 
-/**************************************************************** JAVA ****************************************************************/
+/****************************************** JAVA *********************************************/
 //Approach - Greedily pick them first having maximum proft/weight ratio
 //T.C : O(nlogn) due to sorting
 //S.C : O(n)
