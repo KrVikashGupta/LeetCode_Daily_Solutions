@@ -3,6 +3,7 @@ leetcode link : https://leetcode.com/problems/find-the-number-of-ways-to-place-p
 @vikashkumargupta
 
 */
+**************************************************JAVA***************************************************************
 import java.util.Arrays;
 class Solution {
     public int numberOfPairs(int[][] P) {
