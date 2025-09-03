@@ -1,9 +1,7 @@
 /*
 201. Bitwise AND of Numbers Range
-
 @vikash kumar gupta
 */
-
 class Solution {
     public int rangeBitwiseAnd(int left, int right) {
           int rightShiftCnt = 0;
