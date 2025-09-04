@@ -1,9 +1,8 @@
 /*
 leetcode link : https://leetcode.com/problems/find-closest-person/description
 @vikashkumargupta
-
 */
-
+**************************************JAVA********************************************************
 
 class Solution {
     public int findClosest(int x, int y, int z) {
