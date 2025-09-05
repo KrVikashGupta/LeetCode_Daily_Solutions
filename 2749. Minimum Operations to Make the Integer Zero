@@ -3,7 +3,7 @@ Leetcode Link : https://leetcode.com/problems/minimum-operations-to-make-the-int
 Company Tags  : will soon update    
 */
 
-/****************************************************** JAVA **************************************************************/
+/****************************************************** JAVA *************************************************************/
 //Approach-1 - Maths derivation
 //T.C : O(log(num1)) upper bound
 //S.C : O(1)
