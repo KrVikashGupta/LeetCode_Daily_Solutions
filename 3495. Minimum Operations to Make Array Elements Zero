@@ -3,7 +3,7 @@ Leetcode Qn Link            : https://leetcode.com/problems/minimum-operations-t
 Company Tags                : Will update later
 @vikashkumargupta
 */
-/***************************************************** JAVA ************************************************************/
+/***************************************************** JAVA ***********************************************************/
 //Approach (Using Power Four Range for Steps of Reduction to 0)
 //T.C : O(Q * log(max r)), Q =  number of queries, r = right value of ranges
 //S.C : O(1)
