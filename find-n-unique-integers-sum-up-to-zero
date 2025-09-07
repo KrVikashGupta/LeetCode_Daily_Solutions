@@ -11,7 +11,6 @@ Company Tags     : will update later
 class Solution {
     public int[] sumZero(int n) {
         int[] result = new int[n];
-
         int start = 1;
         int i = 0;
         while (i + 1 < n) {
