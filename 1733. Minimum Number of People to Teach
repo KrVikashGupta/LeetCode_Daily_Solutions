@@ -1,7 +1,9 @@
 /*
-    Leetcode Link               : https://leetcode.com/problems/minimum-number-of-people-to-teach
-*/
+Leetcode Link : https://leetcode.com/problems/minimum-number-of-people-to-teach
+Company Tags  : will update soon
 
+
+*/
 
 /********************************************************************** C++ **********************************************************************/
 //Approach (Greedily picking the mostKnown language among the sadUsers (those who cannpt talk to their friends))
