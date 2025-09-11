@@ -1,6 +1,8 @@
- 31 leetcode Problem
-
-
+/*
+leetcode link : https://leetcode.com/problems/next-permutation/description/
+@vikashkumargupta
+*/
+************************************JAVA***********************************************************
 class Solution {
     public void nextPermutation(int[] nums) {
         int ind1=-1;
@@ -52,6 +54,7 @@ class Solution {
 Time complexity: |O(n)|
 Space complexity:|O(1)|
 */ 
+
 
 
 
