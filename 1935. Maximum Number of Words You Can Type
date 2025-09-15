@@ -1,0 +1,43 @@
+/*
+Leetcode Link  : https://leetcode.com/problems/maximum-number-of-words-you-can-type
+Company Tags   : will update later
+*/
+
+
+/*************************************************************************** JAVA ***************************************************************************/
+//Approach - simple iteration
+//T.C : O(m+n), m = length of text, n = length of brokenLetters
+//S.C : O(1)
+class Solution {
+    public int canBeTypedWords(String text, String brokenLetters) {
+        // Step 1: Create a boolean array to mark broken letters
+        boolean[] broken = new boolean[26];
+        for (char ch : brokenLetters.toCharArray()) {
+            broken[ch - 'a'] = true;
+        }
+
+        int result = 0;
+        boolean foundBroken = false;
+
+        // Step 2: Iterate through text character by character
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
+
+            if (ch == ' ') { // End of a word
+                if (!foundBroken) {
+                    result++;
+                }
+                foundBroken = false; // reset for next word
+            } else if (broken[ch - 'a']) {
+                foundBroken = true; // found a broken letter in this word
+            }
+        }
+
+        // Step 3: Check last word (no space after last word)
+        if (!foundBroken) {
+            result++;
+        }
+
+        return result;
+    }
+}
