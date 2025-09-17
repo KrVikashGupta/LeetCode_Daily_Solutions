@@ -1,3 +1,11 @@
+/*
+leetcode link : https://leetcode.com/problems/design-a-food-rating-system/description/
+@vikashkumargupta
+
+*/
+
+
+*************************************************************Java************************************************************
 import java.util.*;
 
 class Food {
