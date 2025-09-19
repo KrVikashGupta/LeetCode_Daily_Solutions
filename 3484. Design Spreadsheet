@@ -4,7 +4,7 @@ Company Tags  : will update later
 */
 
 
-/*************************************************************** JAVA *****************************************************************/
+/*************************************************************** JAVA ***************************************************************/
 //Approach (Simple simulation)
 // T.C. : Constructor → O(rows), setCell / resetCell → O(1), getValue → O(L) for substr where L = length of formula
 // S.C. : O(1)
