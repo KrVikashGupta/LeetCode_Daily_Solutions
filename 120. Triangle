@@ -1,11 +1,10 @@
 /*
 Leetcode Link  : https://leetcode.com/problems/triangle/ 
-Company Tags                  : Will updat elater
+Company Tags   : Will updat elater
 Solve "Minimum Falling Path Sum" (Leetcode-931) 
 */
 
 /**************************************************************** Java ****************************************************************/
-//Approach-1 Recursion with Memoization - Accepted (In the video I initialized the t[][] by -1 by mistake. That's why you will see TLE in the video)
 //T.C : O(n^2) states in t[][]
 //S.C : O(n^2)
 class Solution {
