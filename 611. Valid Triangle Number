@@ -19,7 +19,7 @@ class Solution {
                     if (nums[i] + nums[j] > nums[k] &&
                         nums[i] + nums[k] > nums[j] &&
                         nums[j] + nums[k] > nums[i]) {
-                        count++;
+                         count++;
                     }
                 }
             }
