@@ -7,7 +7,7 @@ Leetcode Link :  https://leetcode.com/problems/largest-triangle-area/description
 ***************************************************************Java************************************************************
 
 class Solution {
-    public double largestTriangleArea(int[][] points) {
+public double largestTriangleArea(int[][] points) {
         double maxArea = 0.0;
         int n = points.length;
         for (int i = 0; i < n; ++i) {
