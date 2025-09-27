@@ -19,7 +19,7 @@ public double largestTriangleArea(int[][] points) {
                     double area = 0.5 * Math.abs(x1*(y2 - y3) + x2*(y3 - y1) + x3*(y1 - y2));
                     maxArea = Math.max(maxArea, area);
                 }
-            }
+            
         }
         return maxArea;
     }
