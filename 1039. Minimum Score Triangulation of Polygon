@@ -1,0 +1,151 @@
+/*
+Leetcode Link : https://leetcode.com/problems/triangle/ 
+Company Tags  : Will updat elater
+Solve "Minimum Falling Path Sum" (Leetcode-931) before this question
+*/
+
+/**************************************************************** Java ****************************************************************/
+//Approach-1 Recursion with Memoization - Accepted 
+//T.C : O(n^2) states in t[][]
+//S.C : O(n^2)
+class Solution {
+    int[][] t;
+    int n;
+
+    private int solve(List<List<Integer>> triangle, int row, int col) {
+        if (row == n - 1) {
+            return triangle.get(row).get(col);
+        }
+
+        if (t[row][col] != Integer.MAX_VALUE) {
+            return t[row][col];
+        }
+
+        int minPath = triangle.get(row).get(col) +
+                      Math.min(solve(triangle, row + 1, col),
+                               solve(triangle, row + 1, col + 1));
+
+        return t[row][col] = minPath;
+    }
+
+    public int minimumTotal(List<List<Integer>> triangle) {
+        n = triangle.size();
+        t = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(t[i], Integer.MAX_VALUE);
+        }
+
+        return solve(triangle, 0, 0);
+    }
+}
+
+
+
+//Approach-2 : Bottom Up - Just like "Minimum Falling Path Sum"
+//T.C : O(n^2)
+//S.C : O(n^2)
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        int[][] t = new int[n][n];
+
+        // Copy triangle into t
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                t[i][j] = triangle.get(i).get(j);
+            }
+        }
+
+        // Bottom-up calculation
+        for (int row = n - 2; row >= 0; row--) {
+            for (int col = 0; col <= row; col++) {
+                t[row][col] += Math.min(t[row + 1][col], t[row + 1][col + 1]);
+            }
+        }
+
+        return t[0][0];
+    }
+}
+
+
+
+//Approach-3 : Bottom Up optimized - O(n) space
+//T.C : O(n^2)
+//S.C : O(n)
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        int[] t = new int[n];
+
+        // Initialize with last row
+        for (int i = 0; i < n; i++) {
+            t[i] = triangle.get(n - 1).get(i);
+        }
+
+        for (int row = n - 2; row >= 0; row--) {
+            for (int col = 0; col <= row; col++) {
+                t[col] = triangle.get(row).get(col) + Math.min(t[col], t[col + 1]);
+            }
+        }
+
+        return t[0];
+    }
+}
+
+
+
+//Approach-4 : You can also solve it from top to bottom direction
+//T.C : O(n^2)
+//S.C : O(n)
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        int[] t = new int[n];
+
+        t[0] = triangle.get(0).get(0);
+
+        for (int row = 1; row < n; row++) {
+            // Go right → left to avoid overwriting previous values
+            for (int col = row; col >= 0; col--) {
+                if (col == 0) {
+                    t[col] = t[col] + triangle.get(row).get(col);
+                } else if (col == row) {
+                    t[col] = t[col - 1] + triangle.get(row).get(col);
+                } else {
+                    t[col] = Math.min(t[col], t[col - 1]) + triangle.get(row).get(col);
+                }
+            }
+        }
+
+        int minPath = t[0];
+        for (int val : t) {
+            minPath = Math.min(minPath, val);
+        }
+
+        return minPath;
+    }
+}
+
+
+
+//Approach-5 : Bottom Up optimized - manipulating the input
+//T.C : O(n^2)
+//S.C : O(1)
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int rows = triangle.size();
+
+        for (int row = 1; row < rows; row++) {
+            for (int col = 0; col < triangle.get(row).size(); col++) {
+                int prevUpVal = triangle.get(row - 1).get(Math.min(col, triangle.get(row - 1).size() - 1));
+                int prevUpLeft = triangle.get(row - 1).get(Math.max(col - 1, 0));
+
+                int updatedVal = triangle.get(row).get(col) + Math.min(prevUpVal, prevUpLeft);
+                triangle.get(row).set(col, updatedVal);
+            }
+        }
+
+        return Collections.min(triangle.get(rows - 1));
+    }
+}
