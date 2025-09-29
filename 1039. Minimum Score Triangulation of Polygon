@@ -6,7 +6,7 @@ Solve "Minimum Falling Path Sum" (Leetcode-931) before this question
 
 /**************************************************************** Java ****************************************************************/
 //Approach-1 Recursion with Memoization - Accepted 
-//T.C : O(n^2) states int[][]
+//T.C : O(n^2)
 //S.C : O(n^2)
 class Solution {
     int[][] t;
