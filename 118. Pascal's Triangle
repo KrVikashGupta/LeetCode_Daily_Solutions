@@ -11,7 +11,7 @@ List<List<Integer>> triangle = new ArrayList<List<Integer>>();
         triangle.get(0).add(1);
 
         for (int rowNum = 1; rowNum < numRows; rowNum++) {
-            List<Integer> row = new ArrayList<>();
+List<Integer> row = new ArrayList<>();
             List<Integer> prevRow = triangle.get(rowNum - 1);
 
             row.add(1);
