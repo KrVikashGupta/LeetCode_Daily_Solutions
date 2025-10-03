@@ -7,7 +7,7 @@ Company Tags   : Twitter, Google
 /************************************************************ JAVA ************************************************************/
 //Approach (Using Heap)
 //T.C : O(m*n log(m*n))
-//S.C : O(m*n)
+//S.C : O(m*n){
 class Solution {
     public int trapRainWater(int[][] heightMap) {
         int m = heightMap.length;
