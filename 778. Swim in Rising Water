@@ -15,7 +15,7 @@ And what is smallest of that value res in the path among all of them ?
 //NOTE - In the paths, we have to find the maximum from the minimum path (Minimize the Maximum hints towards Binary Search)
 //T.C : O(n^2 * log(n^2)) = O(n^2 log n)
 //S.C : O(n^2) for visited
-class Solution 
+class Solution {
     int n;
     int[][] directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
     boolean[][] visited;
