@@ -48,7 +48,7 @@ public:
         int n = height.size();
         int i = 0, j = n-1;
         
-        int water = 0;
+        int water = 0;]
         while(i<j) {
             
             //start from the smallest one and calculate water
