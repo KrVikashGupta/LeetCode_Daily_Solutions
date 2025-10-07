@@ -40,7 +40,7 @@ public:
     }
 };
 
-//Approach-2 (Two pointer Greedy (O(N)) (It's similar to Approach-1)
+//Approach-2 (Two pointer Greedy (O(N)) (It's similar to Approach-1);;;;;
 //Just that we are eliminating heights at one go
 class Solution {
 public:
