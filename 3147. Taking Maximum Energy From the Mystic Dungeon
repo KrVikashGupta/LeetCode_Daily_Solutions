@@ -1,0 +1,63 @@
+/*
+Leetcode Link : https://leetcode.com/problems/taking-maximum-energy-from-the-mystic-dungeon
+Company Tags  : will update soon
+
+*/
+
+/**************************************************************** JAVA ****************************************************************/
+// Approach-1 - Recursion + Memoization
+// T.C : O(n)
+// S.C : O(n)
+class Solution {
+    private int n;
+    private int K;
+    private int solve(int i, int[] energy, int[] t) {
+        if (i >= n) return 0;
+
+        if (t[i] != Integer.MIN_VALUE) return t[i]; // Already computed
+
+        // Take energy at i and then best from (i + k) onwards
+        t[i] = energy[i] + solve(i + K, energy, t);
+        return t[i];
+    }
+
+    public int maximumEnergy(int[] energy, int k) {
+        n = energy.length;
+        K = k;
+        int[] t = new int[n];
+        Arrays.fill(t, Integer.MIN_VALUE);
+
+        int maxEnergy = Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            maxEnergy = Math.max(maxEnergy, solve(i, energy, t));
+        }
+
+        return maxEnergy;
+    }
+}
+
+
+// Approach-2 - Bottom Up
+// T.C : O(n)
+// S.C : O(1) extra (modifies input array)
+class Solution {
+    public int maximumEnergy(int[] energy, int k) {
+        int n = energy.length;
+        int[] t = new int[n]; // DP array to store max energy starting from each index
+
+        for (int i = n - 1; i >= 0; i--) {
+            if (i + k < n)
+                t[i] = energy[i] + t[i + k];
+            else
+                t[i] = energy[i];
+        }
+
+        // Find the maximum energy possible among all starting points
+        int maxEnergy = t[0];
+        for (int i = 1; i < n; i++) {
+            maxEnergy = Math.max(maxEnergy, t[i]);
+        }
+
+        return maxEnergy;
+    }
+}
