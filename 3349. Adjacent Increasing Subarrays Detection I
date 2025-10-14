@@ -9,7 +9,7 @@
 //S.C : O(1)
 class Solution {
     public boolean hasIncreasingSubarrays(List<Integer> nums, int k) {
-        int n = nums.size();;
+        int n = nums.size();
 
         for (int start = 0; start + 2 * k <= n; start++) {
             boolean firstInc = isIncreasing(nums, start, start + k);
