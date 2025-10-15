@@ -11,7 +11,7 @@ Company Tags  : Will update later
 //S.C : O(1)
 class Solution {
     public int maxIncreasingSubarrays(List<Integer> nums) {
-        int n = nums.size();
+        int n = nums.size()
 
         int currRun = 1;
         int prevRun = 0;
