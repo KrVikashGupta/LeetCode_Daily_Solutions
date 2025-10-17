@@ -10,7 +10,7 @@ Leetcode Link : https://leetcode.com/problems/minimum-difference-in-sums-after-r
 class Solution {
     public long minimumDifference(int[] nums) {
         int N = nums.length; // 3*n
-        int n = N / 3
+        int n = N / 3;
         
         long[] leftMinSum = new long[N];
         long[] rightMaxSum = new long[N];
