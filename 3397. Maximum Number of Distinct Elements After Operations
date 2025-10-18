@@ -14,7 +14,6 @@ Company Tags  : will update soon
 class Solution {
     public int maxDistinctElements(int[] nums, int k) {
         int n = nums.length;
-
         Arrays.sort(nums);
 
         int count = 0;
