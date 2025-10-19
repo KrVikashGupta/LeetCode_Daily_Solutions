@@ -12,7 +12,7 @@ Company Tags   : will update later
 class Solution {
     private String rotate(String s, int b) {
         StringBuilder sb = new StringBuilder(s);
-        sb.reverse();
+        sb.reverse
         reverseRange(sb, 0, b - 1);
         reverseRange(sb, b, sb.length() - 1);
         return sb.toString();
