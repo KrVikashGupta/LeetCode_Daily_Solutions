@@ -3,7 +3,7 @@
 Leetcode Link : https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements
 @vikashkumargupta
 */
-/******************************************** JAVA *************************************************/
+/******************************************** JAVA ***********************************************/
 //Approach (Using 2 heaps and cumulative sum)
 //T.C : O(NlogN)
 //S.C : O(N)
