@@ -9,7 +9,7 @@ Company Tags   : will update later
 
 /*********************************************************** JAVA **************************************************/
 //Approach-1 - (Simple simulation)
-//T.C : O(n^ * m) 
+//T.C : O(n^ * m)
 //S.C : O(n)
 class Solution {
     private boolean isValid(int[] nums, int count, int i, int direction) {
