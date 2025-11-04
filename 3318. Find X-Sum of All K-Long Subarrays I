@@ -20,7 +20,7 @@ class Solution {
             int freq = entry.getValue();
             int val = entry.getKey();
             pq.offer(new int[]{freq, val});
- 
+
             if (pq.size() > x) {
                 pq.poll();
             }
