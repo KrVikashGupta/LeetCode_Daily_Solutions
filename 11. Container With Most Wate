@@ -6,7 +6,7 @@ Company Tags  : Bloomberg, Facebook, Google, Amazon, Adobe
 */
 
 //Why does my solution given below works?
-/*
+
 Idea / Proof (Gathered from Discussion Section of Leetcode from some intelligent programmers) :
     The widest container (using first and last line) is a good candidate, because of its width.
     Its water level is the height of the smaller one of first and last line. All other containers
