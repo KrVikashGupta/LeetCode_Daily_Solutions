@@ -1,32 +1,10 @@
-/*     Scroll below to see JAVA code also    */
 /*
-    MY YOUTUBE VIDEO ON THIS Qn : https://www.youtube.com/watch?v=CAvYhc74Eio
-    Company Tags                : Will update soon
-    Leetcode Link               : https://leetcode.com/problems/maximize-the-minimum-powered-city
+Leetcode Link : https://leetcode.com/problems/maximize-the-minimum-powered-city
+Company Tags  : Will update soon
+@vikashkumargupta
 */
 
 
-
-/****************************************************************** C++ ******************************************************************/
-//Approach (Binary search along with Difference Array Technique for optimisation
-//T.C : O(n * log(sum+k)), sum = sum of station values
-//S.C : O(n)
-class Solution {
-public:
-
-    bool check(long long mid, vector<long long>& diff, int r, int k, int n) {
-        vector<long long> tempDiff = diff;
-
-        long long cumSum = 0; //it will give power of a city at any point of time
-
-        for(int i = 0; i < n; i++) {
-            cumSum += tempDiff[i];
-
-            if(cumSum < mid) {
-                long long need = mid - cumSum;
-                if(need > k) {
-                    return false;
-                }
 
                 k -= need;
                 cumSum += need; //gredily I had chosen to add station on the city which can cover more range
