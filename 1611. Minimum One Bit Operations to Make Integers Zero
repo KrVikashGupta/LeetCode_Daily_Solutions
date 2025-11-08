@@ -2,7 +2,7 @@
 Leetcode Link : https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/
 Company Tags  : LinkedIn
 @vikashkumargupta
-*/
+*
 
 /***************************************************************** JAVA *************************************************************/
 //Using mathematical observation - Breaking into smaller sub-problems
