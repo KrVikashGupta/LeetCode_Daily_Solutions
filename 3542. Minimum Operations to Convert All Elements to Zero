@@ -15,7 +15,6 @@ class Solution {
         for (int num : nums) {
             unique.add(num);
         }
-
         int n = nums.length;
         int ops = 0;
 
