@@ -10,7 +10,7 @@ Leetcode Link     : https://leetcode.com/problems/unique-length-3-palindromic-su
 /************************************************************ JAVA ************************************************************/
 //Approach-1
 //T.C : O(n)
-//S.C : O(1) - ONly 26 sized always
+//S.C : O(1) - Only 26 sized always
 class Solution {
     public int countPalindromicSubsequence(String s) {
         int n = s.length();
