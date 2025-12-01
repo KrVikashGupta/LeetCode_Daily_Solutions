@@ -6,7 +6,7 @@ Company Tags  : GOOGLE
 
 
 /****************************************************************** JAVA ******************************************************************/
-//Approach-1 (Using Linesr search from minute = max_limit till minute = 1
+//Approach-1 (Using Linear search from minute = max_limit till minute = 1
 //T.C : O(m*k)
 //S.C : O(1)
 class Solution {
