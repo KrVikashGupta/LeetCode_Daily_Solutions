@@ -10,7 +10,6 @@ Company Tags  : GOOGLE
 //T.C : O(m*k)
 //S.C : O(1)
 class Solution {
-
     private boolean possible(int[] batteries, long time, int n) {
         long target = n * time;
 
