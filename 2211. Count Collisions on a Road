@@ -10,6 +10,8 @@ Company Tags  : will update soon
 //S.C : O(1)
 class Solution {
     public int countCollisions(String directions) {
+
+
         int n = directions.length();
 
         int i = 0; // left boundary
