@@ -1,24 +1,33 @@
 /*
-leetcode links : https: /leetcode.com/problems/container-with-most-water/description
+leetcode links : https://leetcode.com/problems/count-the-number-of-computer-unlocking-permutations/description
 @vikashkumargupta
 */
 
+
+****************************************************************Java*****************************************************************
+
 class Solution {
-    public int maxArea(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
-        int maxArea = 0;
-
-        while (left < right) {
-            int currentArea = Math.min(height[left], height[right]) * (right - left);
-            maxArea = Math.max(maxArea, currentArea);
-
-            if (height[left] < height[right]) {
-                left++;
-            } else {
-                right--;
+    int mod = 1_000_000_007; 
+    public int countPermutations(int[] complexity) {
+        
+        int first = complexity[0];
+        // making sure that we are able to unlock all computers
+        for(int i=1; i<complexity.length; i++) {
+            if(complexity[i] <= first) {
+                return 0;
             }
         }
-        return maxArea;
+        // No of ways to place n-1 computers in n-1 places
+        return fact(complexity.length-1);
+
+    }
+
+    int fact(int n) {
+        long res = 1;
+        for(int i=2; i<=n; i++) {
+            res = (res*i)%mod;
+        }
+
+        return (int)res;
     }
 }
