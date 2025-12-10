@@ -7,7 +7,7 @@ leetcode links : https://leetcode.com/problems/count-the-number-of-computer-unlo
 ****************************************************************Java*****************************************************************
 
 class Solution {
-    int mod = 1_000_000_007; 
+    int mod = 1_000_000_007;
     public int countPermutations(int[] complexity) {
         
         int first = complexity[0];
