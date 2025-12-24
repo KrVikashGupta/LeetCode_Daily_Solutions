@@ -4,8 +4,6 @@ Company Tags   : will update later
 @vikashkumargupta
 */
 
-
-
 /*********************************************************** JAVA **************************************************/
 //Approach-1 (Using Arrays.sort so that we can simply assign the apples to largest boxes first)
 //T.C : O(n + m log m)
