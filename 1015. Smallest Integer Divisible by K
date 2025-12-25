@@ -7,7 +7,7 @@ Company Tags  : will update later
 
 /****************************************************** JAVA **************************************************************/
 //Approach - Observation about Modulo(%) values
-//T.C : O(k)
+//T.C : O(n)
 //S.C : O(1)
 class Solution {
     public int smallestRepunitDivByK(int K) {
