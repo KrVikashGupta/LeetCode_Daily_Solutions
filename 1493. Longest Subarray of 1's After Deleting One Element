@@ -1,7 +1,7 @@
-
 /*
-    Company Tags                : will update later
-    Leetcode Link               : https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/
+Company Tags                : will update later
+Leetcode Link               : https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/
+@vikashkumargupta
 */
 /************************************************** JAVA **************************************************/
 //Approach (Trying all possible splits and rotating grid to cover other posisble splits as well)
