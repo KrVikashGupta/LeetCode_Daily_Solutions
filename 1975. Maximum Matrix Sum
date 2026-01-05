@@ -13,7 +13,7 @@ class Solution {
         int m = matrix.length;
         int n = matrix[0].length;
 
-        long sum = 0;
+        long sum = 0
         int countNegatives = 0;
         int smallestAbsoluteValue = Integer.MAX_VALUE;
 
