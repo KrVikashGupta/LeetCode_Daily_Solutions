@@ -7,7 +7,7 @@ leetcode link : https://leetcode.com/problems/count-square-submatrices-with-all-
 class Solution {
     public int countSquares(int[][] A) {
         if (A == null || A.length == 0 || A[0].length == 0) {
-            return 0;
+            return 0;             
         }
 
         int m = A.length;
