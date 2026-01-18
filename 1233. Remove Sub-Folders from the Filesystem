@@ -6,7 +6,7 @@ Leetcode Link : https://leetcode.com/problems/minimum-difference-in-sums-after-r
 /******************************************** JAVA **********************************************/
 //Approach (Using 2 heaps and cumulative sum)
 //T.C : O(NlogN)
-//S.C : O(N)
+//S.C : O(N
 class Solution {
     public long minimumDifference(int[] nums) {
         int N = nums.length; // 3*n
