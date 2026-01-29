@@ -5,9 +5,7 @@ Leetcode Link : https://leetcode.com/problems/minimum-cost-to-convert-string-i/d
 /******************************************** JAVA **********************************************/
 
 class Solution {
-    public long minimumCost(String source, String target,
-                            char[] original, char[] changed, int[] cost) {
-
+    public long minimumCost(String source, String target, char[] original, char[] changed, int[] cost) {
         final long INF = (long) 1e18;
         long[][] dist = new long[26][26];
 
