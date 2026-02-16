@@ -10,7 +10,7 @@ Leetcode Link : https://leetcode.com/problems/reverse-bits
 //T.C : O(1)
 //S.C : O(1)
 class Solution {
-    public int reverseBits(int n) {
+    public int reverseBits(int n){
         int result = 0;
         
         for (int i = 0; i < 32; i++) {
