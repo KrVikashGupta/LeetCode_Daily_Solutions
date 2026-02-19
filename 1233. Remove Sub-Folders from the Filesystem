@@ -14,7 +14,7 @@ class Solution {
         
         long[] leftMinSum = new long[N];
         long[] rightMaxSum = new long[N];
-        
+
         // Max heap for left side (to keep n smallest elements)
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
         long leftSum = 0;
