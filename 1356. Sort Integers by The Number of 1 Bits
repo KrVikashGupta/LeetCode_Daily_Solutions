@@ -9,7 +9,6 @@ Leetcode Link : https://leetcode.com/problems/sort-integers-by-the-number-of-1-b
 class Solution {
     public int[] sortByBits(int[] arr) {
         Integer[] temp = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        
         Arrays.sort(temp, (a, b) -> {
             int countA = Integer.bitCount(a);
             int countB = Integer.bitCount(b);
