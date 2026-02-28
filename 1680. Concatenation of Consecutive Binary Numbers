@@ -17,7 +17,6 @@ class Solution {
             int digits = (int)(Math.log(i) / Math.log(2)) + 1;
             result = ((result << digits) % M + i) % M;
         }
-        
         return (int) result;
     }
 }
