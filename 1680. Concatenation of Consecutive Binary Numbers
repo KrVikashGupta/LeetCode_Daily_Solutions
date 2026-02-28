@@ -1,0 +1,48 @@
+/*
+Leetcode Link : https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/
+Company Tags  : Will udpate later
+@Vikashkumargupta
+*/
+
+
+/******************************************************* JAVA *******************************************************/
+//Approach-1 (Using lo2(n) to find bits count)
+//T.C : O(n)
+//S.C : O(n)
+class Solution {
+    public int concatenatedBinary(int n) {
+        long result = 0;
+        int M = 1_000_000_007;
+        
+        for (int i = 1; i <= n; i++) {
+            int digits = (int)(Math.log(i) / Math.log(2)) + 1;
+            result = ((result << digits) % M + i) % M;
+        }
+        
+        return (int) result;
+    }
+}
+
+
+
+//Approach-2 (Using power of 2 property to find bits count)
+//T.C : O(n)
+//S.C : O(n)
+class Solution {
+    public int concatenatedBinary(int n) {
+        long result = 0;
+        int M = 1_000_000_007;
+        int digits = 0;
+        
+        for (int i = 1; i <= n; i++) {
+            //digit count tabhi barhta hai jab power of 2 ata hai
+            if ((i & (i - 1)) == 0) {
+                digits++;
+            }
+            
+            result = ((result << digits) % M + i) % M;
+        }
+        
+        return (int) result;
+    }
+}
