@@ -13,7 +13,6 @@ Company Tags    : Ajira Software
 //S.C : O(n)
 class Solution {
     public int minSwaps(int[][] grid) {
-
         int n = grid.length; // rows == columns
 
         int[] endZeros = new int[n];
