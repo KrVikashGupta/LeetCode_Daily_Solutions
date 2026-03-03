@@ -16,7 +16,7 @@ class Solution {
         }
         // Length of the sequence at level n: 2^n - 1
         int length = (1 << n) - 1;
-        // If k is in the first half, recurse on the first half
+        // If k is in the first half, recurse on the first 
         if (k < Math.ceil(length / 2.0)) {
             return findKthBit(n - 1, k);
         } 
