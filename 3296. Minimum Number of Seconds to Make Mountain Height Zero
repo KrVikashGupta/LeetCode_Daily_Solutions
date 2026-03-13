@@ -13,7 +13,7 @@ class Solution {
     private boolean check(long mid, int[] workerTimes, int mH) {
         long h = 0;
 
-        for (int t : workerTimes) {
+        for (int t : workerTimes){
             h += (long)(Math.sqrt(2.0 * mid / t + 0.25) - 0.5);
 
             if (h >= mH) {
