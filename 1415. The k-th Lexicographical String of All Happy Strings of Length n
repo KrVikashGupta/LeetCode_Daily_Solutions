@@ -12,7 +12,7 @@ class Solution {
         if (curr.length() == n) {
             result.add(curr.toString());
             return;
-        }
+        
         
         for (char ch = 'a'; ch <= 'c'; ch++) {
             if (curr.length() > 0 && curr.charAt(curr.length() - 1) == ch)
