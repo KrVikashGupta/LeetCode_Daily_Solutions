@@ -10,7 +10,7 @@ Company Tags  : will update later
 //T.C : O(n)
 //S.C : O(1)
 class Solution {
-    public int smallestRepunitDivByK(int K) {
+    public int smallestRepunitDivByK(int k) {
         if (K == 1)
             return 1;
 
