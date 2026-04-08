@@ -17,7 +17,7 @@ class Solution {
             }
        }
         // No of ways to place n-1 computers in n-1 places
-        return fact(complexity.length-1);
+        return fact(complexity.length-1;
 
     }
 
