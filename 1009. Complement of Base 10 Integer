@@ -29,7 +29,7 @@ class Solution {
 //T.C : O(log(n))
 //S.C : O(1)
 class Solution {
-    public int bitwiseComplement(int n) {
+    public int bitwiseComplement(it n) {
         if (n == 0)
             return 1;
 
