@@ -52,7 +52,7 @@ class Solution {
 
             int normalizedK = k % len;
 
-            // Rotate left by normalizedK
+            // Rotate left by normalizedK   
             Collections.rotate(nums, -normalizedK);
 
             int idx = 0;
