@@ -6,7 +6,7 @@ Company Tags  : will update later
 
 
 /***************************************************** JAVA ************************************************************/
-//Approach - Observation about Modulo(%) value
+//Approach - Observation about Modulo(%) vale
 //T.C : O(n)
 //S.C : O(1)
 class Solution {
