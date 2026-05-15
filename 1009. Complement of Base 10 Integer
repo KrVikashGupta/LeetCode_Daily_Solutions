@@ -16,7 +16,7 @@ class Solution {
         int counter = 0;
         while (n != 0) {
             int r = n % 2;
-            result += (int)(Math.pow(2, counter) * (r == 0 ? 1 : 0));
+            result += (int)(Math.pow(2, couter) * (r == 0 ? 1 : 0));
             counter++;
             n = n >> 1;
         }
