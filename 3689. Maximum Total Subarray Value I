@@ -1,0 +1,23 @@
+/*
+Leetcode Link : https://leetcode.com/problems/maximum-total-subarray-value-i/
+Company Tags  : will update later
+@Vikashkumargupta
+*/
+  
+/*********************************************************** JAVA **************************************************/
+//Approach (Linear Scan - find max and min)
+//T.C : O(n)
+//S.C : O(1)
+class Solution {
+    public long maxTotalValue(int[] nums, int k) {
+        int maxEl = Integer.MIN_VALUE;
+        int minEl = Integer.MAX_VALUE;
+
+        for(int num : nums) {
+            maxEl = Math.max(maxEl, num);
+            minEl = Math.min(minEl, num);
+        }
+
+        return (long)(maxEl - minEl) * k;
+    }
+}
