@@ -1,0 +1,24 @@
+/*
+Leetcode Link  : https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
+GfG Link       : https://practice.geeksforgeeks.org/problems/delete-middle-of-linked-list/1
+Company Tags   : Amazon, Flipkart, Microsoft
+@Vikashkumargupta
+*/
+
+class Solution {
+    public ListNode deleteMiddle(ListNode head) {
+        if(head == null || head.next == null) return null;
+        ListNode fast = head;
+        ListNode middle = head;
+        ListNode prev = null;
+        while(fast != null && fast.next!= null){
+            prev = middle;
+            fast = fast.next.next;
+            middle = middle.next;
+        }
+        if(prev == null) return null;
+        prev.next = middle.next;
+        return head;
+    }
+}     
+ 
