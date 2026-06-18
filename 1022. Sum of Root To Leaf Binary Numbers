@@ -7,7 +7,7 @@ Company Tags  : AMAZON
 /**************************************************************** JAVA ***************************************************************/
 //Approach - Recursion
 //T.C : O(n)
-//S.C : O(1) Auxiliary space (But O(n) system recursion stack space)
+//S.C : O(1) Auxiliary space (But O(n) system recursion stack sace)
 class Solution {
     int solve(TreeNode root, int val) {
 
