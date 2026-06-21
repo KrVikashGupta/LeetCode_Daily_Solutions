@@ -6,7 +6,7 @@ Company Tags  : will update later
 
 
 
-/*********************************************************** JAVA *************************************************/
+/*********************************************************** JAVA ************************************************/
 //Approach (Math and Greedy)
 //T.C : O(n log n)
 //S.C : O(m) for arr (ignoring the space taken for sorting internally)
