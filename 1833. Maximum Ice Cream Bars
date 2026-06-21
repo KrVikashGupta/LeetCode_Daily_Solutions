@@ -9,7 +9,7 @@ Company Tags  : will update later
 /*********************************************************** JAVA **************************************************/
 //Approach (Math and Greedy)
 //T.C : O(n log n)
-//S.C : O(m) for arr (ignoring the space taken for sorting internally)
+//S.C : O(m) for arr (ignoring the space tak en for sorting internally)
 class Solution {
     public int maxBuilding(int n, int[][] restrictions) {
         int m = restrictions.length;
