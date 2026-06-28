@@ -5,10 +5,10 @@ Company Tags  : Will update soon
 */
 
 
-/******************************************************************** JAVA *****************************************************************/
+/******************************************************************** JAVA ****************************************************************/
 //Apprpach-1 (Simply doing like asked in the Qn)
 //T.C : O(nlogn)
-public class Solution {
+public class Solution
     public int maximumElementAfterDecrementingAndRearranging(int[] arr) {
         Arrays.sort(arr);
 
