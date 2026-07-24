@@ -3,6 +3,8 @@ leetcode link : https://leetcode.com/problems/count-square-submatrices-with-all-
 @vikashkumargupta
 */
 
+
+
 class Solution {
     public int countSquares(int[][] A) {
         if (A == null || A.length == 0 || A[0].length == 0) {
