@@ -8,7 +8,7 @@ Company Tags  : AMAZON
 //Approach - Recursion
 //T.C : O(n)
 //S.C : O(1) Auxiliary space (But O(n) system recursion stack space) 
-class Solution {
+class Solution { 
     int solve(TreeNode root, int val) {
 
         if (root == null) {
