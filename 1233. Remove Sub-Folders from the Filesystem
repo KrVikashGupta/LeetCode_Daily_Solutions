@@ -16,7 +16,7 @@ class Solution {
         long[] rightMaxSum = new long[N];
 
         // Max heap for left side (to keep n smallest elements)
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a); 
         long leftSum = 0;
         for (int i = 0; i < 2 * n; i++){
             maxHeap.offer(nums[i]);
