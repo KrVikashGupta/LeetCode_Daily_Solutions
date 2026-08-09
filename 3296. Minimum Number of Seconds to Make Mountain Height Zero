@@ -5,7 +5,7 @@ Leetcode Link : https://leetcode.com/problems/minimum-number-of-seconds-to-make-
 
  
 
-/****************************************************************** JAVA ******************************************************************/   
+/****************************************************************** JAVA ******************************************************************/    
 //Approach (Binary search on answer)
 //T.C : O(n * log(Tmax * mountainHeight^2), where Tmax = maximum time among all workers in the input, n = length of workerTimes
 //S.C : O(1)
