@@ -10,7 +10,7 @@ Leetcode Link : https://leetcode.com/problems/minimum-number-of-seconds-to-make-
 //T.C : O(n * log(Tmax * mountainHeight^2), where Tmax = maximum time among all workers in the input, n = length of workerTimes
 //S.C : O(1)
 class Solution {
-    private boolean check(long mid, int[] workerTimes, int mH) {
+    private boolean check(long mid, int[] workerTimes, int mH) {   
         long h = 0;
 
         for (int t : workerTimes){
