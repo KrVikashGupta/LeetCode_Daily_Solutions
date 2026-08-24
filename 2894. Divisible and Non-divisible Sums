@@ -6,7 +6,7 @@ class Solution {
         if(i % m != 0) num1 += i;
         else num2 +=i;
     }
-    return num1 - num2;
+    return num1 - num2; 
   }          
 }
  
