@@ -12,7 +12,7 @@ class Solution {
     int[][] t;
     int n;
 
-    private int solve(List<List<Integer>> triangle, int row, int col) {   
+    private int solve(List<List<Integer>> triangle, int row, int col) {    
         if (row == n - 1) {
             return triangle.get(row).get(col);
         }
