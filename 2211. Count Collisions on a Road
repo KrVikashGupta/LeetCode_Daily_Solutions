@@ -3,7 +3,7 @@ Leetcode Link : https://leetcode.com/problems/count-collisions-on-a-road
 Company Tags  : will update soon
 @vikashkumargupta
 */
-
+ 
 /***************************************************************** JAVA ***************************************************************/ 
 //Approach (Simple iteration and simulation)
 //T.C : O(n)
