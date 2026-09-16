@@ -1,0 +1,164 @@
+/*
+Leetcode Link   : https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/
+Company Tags    : Will update later
+@Vikashkumargupta
+*/
+
+
+/*********************************************************** JAVA **************************************************/
+//Approach-1 (Recursion Memo) - TLE
+//T.C : O(n^2 * k)
+//S.C : O(n*K)
+class Solution {
+    int MOD = 1_000_000_007;
+    int[][] t = new int[1001][1001];
+
+    public int solve(int n, int k, int i) {
+        if (k == 0) 
+            return 1;
+
+        if (i >= n) 
+            return 0;
+
+        if (t[k][i] != -1)
+            return t[k][i];
+
+        // take: start a segment at point i, ending at some j > i
+        long take = 0;
+        for (int j = i + 1; j < n; j++)
+            take = (take + solve(n, k - 1, j)) % MOD;
+
+        // skip: don't start a segment at point i, move to i+1
+        long skip = solve(n, k, i + 1) % MOD;
+
+        return t[k][i] = (int) ((take + skip) % MOD);
+    }
+
+    public int numberOfSets(int n, int k) {
+        for (int[] row : t)
+            Arrays.fill(row, -1);
+        return solve(n, k, 0) % MOD;
+    }
+}
+
+
+//Approach-2 (Recursion Memo) - TLE
+//T.C : O(n^2 * k)
+//S.C : O(n*K)
+class Solution {
+    int MOD = 1_000_000_007;
+    int[][] dp = new int[1001][1001];
+
+    public int numberOfSets(int n, int K) {
+
+        for (int i = 0; i <= n; i++) {
+            dp[0][i] = (i < n) ? 1 : 0;
+        }
+
+        for (int k = 1; k <= K; k++) {
+
+            for (int i = n - 1; i >= 0; i--) {
+
+                int skip = dp[k][i + 1];
+
+                int take = 0;
+                for (int j = i + 1; j < n; j++) {
+                    take = (int) ((take + dp[k - 1][j]) % MOD);
+                }
+
+                dp[k][i] = (take + skip) % MOD;
+            }
+        }
+
+        return dp[K][0];
+    }
+}
+
+
+//Approach-3 (Bottom Up + PrevRow Sum Precomputed)
+//T.C : O(n * k)
+//S.C : O(n * K)
+class Solution {
+    int MOD = 1_000_000_007;
+    int[][] dp = new int[1001][1001];
+
+    public int numberOfSets(int n, int K) {
+
+        for (int i = 0; i <= n; i++) {
+            dp[0][i] = (i < n) ? 1 : 0;
+        }
+
+        for (int k = 1; k <= K; k++) {
+
+            int[] prevRowSum = new int[n + 1];
+
+            //prevRowSum[x] = dp[k-1][x] + dp[k-1][x+1] + ... + dp[k-1][n-1]
+            for (int x = n - 1; x >= 0; x--) {
+                prevRowSum[x] = (int) ((prevRowSum[x + 1] + dp[k - 1][x]) % MOD);
+            }
+
+            for (int i = n - 1; i >= 0; i--) {
+
+                int skip = dp[k][i + 1];
+
+                int take = prevRowSum[i + 1];
+                //dp[k-1][i+1] + dp[k-1][i+2] ...... + dp[k-1][n-1]
+
+                dp[k][i] = (take + skip) % MOD;
+            }
+        }
+
+        return dp[K][0];
+    }
+}
+
+
+//Approach-4 (Combinatorics + Binary Exponentiation + Fermat's Little Theorem) - If you want a separate video on this, do let me know.
+//T.C : O((n+k) * log(MOD)) ~= O(n+k)
+//S.C : O(n + K)
+class Solution {
+    long[] fact;
+    long[] invFact;
+    final int MOD = 1_000_000_007;
+
+    //Binary Exponentiation - Taught here - https://www.youtube.com/watch?v=D320QeHS0XQ
+    public long findPower(long a, long b) {
+        if (b == 0)
+            return 1;
+
+        long half = findPower(a, b / 2);
+        long result = (half * half) % MOD;
+
+        if (b % 2 == 1) {
+            result = (result * a) % MOD;
+        }
+
+        return result;
+    }
+
+    //nCr % MOD
+    public long nCr(int n, int r) {
+        //nCr = n! * inv(n-r)! * inv(r)!
+        return (((fact[n] * invFact[r]) % MOD) * invFact[n - r]) % MOD;
+    }
+
+    public int numberOfSets(int n, int k) {
+        //Precompute factorials and inverse factorials - Required for Fermat's Little Theorem
+        fact = new long[n + k];
+        invFact = new long[n + k];
+        Arrays.fill(fact, 1);
+        Arrays.fill(invFact, 1);
+
+        for (int i = 2; i < n + k; i++) {
+            fact[i] = (fact[i - 1] * i) % MOD;
+        }
+
+        //Fermat's little theorem for inverse factorials
+        //Taught here - https://www.youtube.com/watch?v=FMBW7m1Wap0
+        for (int i = 0; i < n + k; i++) {
+            invFact[i] = findPower(fact[i], MOD - 2);
+        }
+
+        return (int) nCr(n + k - 1, 2 * k);
+    }
+}
