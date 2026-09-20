@@ -3,14 +3,14 @@ Leetcode Link : https://leetcode.com/problems/smallest-integer-divisible-by-k/
 Company Tags  : will update later
 @vikashkumargupta
 */
-
+ 
 
 /*********************************************** JAVA ***********************************************/                     
 //Approach - Observation about Modulo(%) value
 //T.C : O(n)
 //S.C : O(1)
 class Solution {
-    public int smallestRepunitDivByK(int k) {
+    public int smallestRepunitDivByK(int k) { 
         if (K == 1)
             return 1;
 
