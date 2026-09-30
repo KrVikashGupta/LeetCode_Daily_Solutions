@@ -5,7 +5,7 @@ Company Tags   : Google
 */
 /*********************************************************** JAVA **************************************************/       
 //Approach (Binary Search with Duplicate Elimination)
-//T.C : O(log n) on average, O(n) in worst case due to duplicate skipping
+//T.C : O(log n) on average, O(n) in worst case due to duplicate skipping 
 //S.C : O(1)
 class Solution {
     public int findMin(int[] nums) {
