@@ -8,7 +8,7 @@ Leetcode Link  : https://leetcode.com/problems/complement-of-base-10-integer
 //Approach-1
 //T.C : O(log(n))
 //S.C : O(1)
-class Solution {
+class Solution { 
     public int bitswiseComplement(int n) {
         if (n == 0)
             return 1;
