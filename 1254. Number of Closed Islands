@@ -7,7 +7,7 @@ COMPANY TAGS  : GOOGLE
 
 //Approach (Using DFS) 
 //T.C : O(m*n) 
-//S.C : O(1), not considering Recursion stack space O(m × n)          
+//S.C : O(1), not considering Recursion stack space O(m × n)                           
 class Solution {
     private int m, n;
 
