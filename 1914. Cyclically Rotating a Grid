@@ -4,10 +4,10 @@ Company Tags  : will update later
 @Vikashkumargupta
 */
 
-/************************************************** JAVA **************************************************/         
+/************************************************** JAVA **************************************************/           
 //Approach - Straight forward iterate layer by layer, rotate and put
 //T.C : O(m*n)
-//S.C : O(m+n)  
+//S.C : O(m+n)   
 class Solution {
     public int[][] rotateGrid(int[][] grid, int k) {
 
