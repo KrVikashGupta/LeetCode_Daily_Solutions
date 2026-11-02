@@ -149,3 +149,4 @@ class Solution {
         return Collections.min(triangle.get(rows - 1));
     }
 }
+ 
